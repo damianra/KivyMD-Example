@@ -1,0 +1,34 @@
+<Home>
+    orientation: 'vertical'
+    MDToolbar:
+        title: 'BTC Convert'
+        elevation:5
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 3
+        size_hint: 1, .1
+        MDLabel:
+            id: pricelbl
+            text: ''
+            halign: 'center'
+            font_size: 20
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 3
+        MDLabel:
+            text: 'BTC Calculator'
+            halign: 'center'
+            font_size: 20
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 3
+            size_hint: 1, .1
+            MDTextField:
+                id: btctext
+                hint_text: "Insert BTC"
+                helper_text: "Convert BTC in USD"
+                helper_text_mode: "on_focus"
+            MDRectangleFlatButton:
+                text: 'Convert'
+                on_press: root.btc_convert()
+        BoxLayout:
